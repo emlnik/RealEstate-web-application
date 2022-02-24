@@ -1,0 +1,30 @@
+<div onload="">
+
+    <div class="main">
+       
+        <table class="countriesTable">
+            <tr class="tabhead">
+          <th width='100%'> Poslednje oglasene nekretnine</th>
+        </tr>
+            <tr class="tabhead">
+                <th width="10%">Naziv nekretnine</th>
+                <th width="60%">Slika nekretnine</th>
+                <th width="30%">Cena</th>
+            </tr>
+            <tbody>
+                <tr *ngFor='let c of nekretnine5'>
+                    <th>{{c.Name}}</th>
+                    <th>
+                        <div>
+                            <img class='avatar' src="{{'../../assets/'+c.randomSlika}}" alt="">
+                        </div>
+                    </th>
+                    <th>{{c.Price}}€</th>
+                </tr>
+
+                
+            </tbody>
+        </table>
+    
+    </div>
+</div>

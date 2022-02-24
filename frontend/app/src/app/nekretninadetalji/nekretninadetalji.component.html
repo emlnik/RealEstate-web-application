@@ -1,0 +1,122 @@
+<div onload="">
+
+    <div class="main">
+        <table class="countriesTable">
+            <tr >
+          <th width='300%' style="text-align: center;" style="color:red"> {{nekretnina.Name}}</th>
+         
+        <br/>
+        </tr>
+            <tr class="tabhead">
+                <th width="10%">
+                    <div class="row">
+                        
+                    <div *ngFor='let img of nekretnina.Pictures' class="avatar">
+                        <img src="{{'../../assets/'+img}}">
+                    </div>
+                    
+                    <td width='5%' *ngIf="flag1(nekretnina)==true">
+                        <div style="color:green">{{nekretnina.Price}}eur</div></td>
+                        <td width='5%' *ngIf="flag1(nekretnina)==false">
+                            <div style="color:red">{{nekretnina.Price}}eur</div></td>
+                    </div>
+                </th>
+                <th width="10%">
+               Tip:{{nekretnina.Type}}
+                </th>
+                <th width="10%">
+                    Kvadratura:{{nekretnina.Area}}
+                     </th>
+                     <th width="10%">
+                        Soba:{{nekretnina.Rooms}}
+                     </th>
+                         
+                        
+            </tr>
+            <tr class="tabhead">
+                <td>Oglasivac : {{flag}}</td>
+           
+            <td width="10%">Parking: {{nekretnina.Parking}}</td>
+            <br>
+            <td width="10%">Cena po kvadratu na lokaciji: {{avgPrice(nekretnina).toFixed(2)}}</td>
+            <br>
+               
+            </tr>
+       
+            <tbody>
+                <tr class="tabhead">
+                    <td>Adresa: {{nekretnina.City}}-{{nekretnina.Municipality}}-{{nekretnina.Microlocation}}</td>
+                    
+                 
+                    <td>Tip grejanja: {{nekretnina.Heating}}</td>
+                    <td *ngIf="nekretnina.Floor!=null">Sprat: {{nekretnina.Floor}}</td>
+                    <td>Ukupna spratnost: {{nekretnina.TotalFloors}}</td>
+                    <td>Stanje: {{nekretnina.State}}</td>
+                   
+                </tr>
+            
+                  
+                  
+                
+            </tbody>
+                
+                <tr class="tabhead"> <th>Opis</th></tr>
+                <tr class="tabhead">
+                    <td>{{nekretnina.About}}</td>
+
+               
+                <tr class="tabhead"> <th>Karakteristike</th></tr>
+               
+                <div >
+                    <td class="tabhead">
+                        <input type="checkbox"  #selected (change)="change(selected.value)" name="Characteristics" [checked]="characteristic.includes(selected.value)" value="Terasa">Terasa <input type="checkbox" #selected2 (change)="change(selected2.value)" [checked]="characteristic.includes(selected2.value)" name="Characteristics" value="Internet">Internet <input type="checkbox" #selected10 (change)="change(selected10.value)" [checked]="characteristic.includes(selected10.value)" name="Characteristics" value="Podrum">Podrum <br>
+                        <input type="checkbox" name="Characteristics" #selected3 (change)="change(selected3.value)" [checked]="characteristic.includes(selected3.value)" value="Lift">Lift <input type="checkbox" #selected4 (change)="change(selected4.value)" [checked]="characteristic.includes(selected4.value)" name="Characteristics" value="Garaza">Garaza <input type="checkbox" name="Characteristics" #sel56 [checked]="characteristic.includes(sel56.value)" (change)="change(sel56.value)" value="Telefon">Telefon <br>
+                        <input type="checkbox" name="Characteristics" #selected6 (change)="change(selected6.value)" [checked]="characteristic.includes(selected6.value)" value="Balkon">Balkon <input type="checkbox" #selected7 (change)="change(selected7.value)" name="Characteristics"  value="Basta">Basta <input type="checkbox" #selected8 (change)="change(selected8.value)" [checked]="characteristic.includes(selected8.value)" name="Characteristics" value="Lodja">Lodja
+                    </td>
+                </div>
+                <tr class="tabhead">
+                     <th><button (click)="showOglasivac()" class="loginButton">Kontakt oglasivaca</button></th> </tr>
+                <tr class="tabhead">
+                   <tr *ngIf="nekretnina.Agencija==null && flagPodaci==true"  class="tabhead">
+                       <td>  Vlasnik: {{oglasavac}}</td>
+                         <td>
+                            <button style="color:red" (click)="showkontakt()">+</button>
+        <output *ngIf="flagkontakt==true">Kontakt: {{kontakt}}</output>
+      
+    </td>
+
+                       
+                   </tr>
+                   <tr class="tabhead">
+<tr *ngIf="nekretnina.Agencija!=null && flagPodaci==true" class="tabhead">
+    <td>Naziv agencije {{agencija}}</td>
+    <td>Adresa {{adresa}}</td>
+    <td>PIB {{pib}}</td>
+    <td>Agent {{oglasavac}}</td>
+    <td>Broj licence {{licenca}}</td>
+    <td>
+        <button style="color:red" (click)="showkontakt()">+</button>
+        <output *ngIf="flagkontakt==true">Kontakt: {{kontakt}}</output>
+        
+    </td>
+
+</tr>
+
+                
+         
+     
+          
+        </table>
+      
+          
+      <div class="fullWidth">
+ 
+        <br/>
+        <button routerLink='/kupac' class="loginButton" style="background-color: lightgrey; border-color: lightgray;"> Vratite se na svoj profil</button>
+   
+      
+    </div>
+      
+       
+    </div>
+</div>

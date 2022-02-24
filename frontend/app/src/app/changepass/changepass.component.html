@@ -1,0 +1,29 @@
+<div onload="">
+		
+    <div class="main">
+        <div class="loginWrapper">
+            <div class="loginLeft">
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <input type='text' class="loginInput" size="30" placeholder="Username" name='username' [(ngModel)]='username'>
+                <br>
+                <input type='password' class="loginInput" size="30" placeholder="Old password" name='oldPassword' [(ngModel)]='oldPassword'>
+                <br>
+                <input type="password" class="loginInput" size="30" placeholder="New password" name='newPassword' [(ngModel)]='newPassword'>
+                <br>
+                <input type="password" class="loginInput" size="30" placeholder="New password check" name='newPassword' [(ngModel)]='newPassword1'>
+                <br>
+                <button (click)='change()' class="loginButton" value="CHANGE PASSWORD"> Promeni lozinku </button>
+                <div class="errorMessage">
+                    {{message}}
+                </div>
+
+            </div>
+            <div class="loginRight">
+            </div>
+        </div>
+    </div>

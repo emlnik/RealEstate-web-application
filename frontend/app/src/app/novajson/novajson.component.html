@@ -1,0 +1,30 @@
+<div onload="">
+		
+    <div class="main">
+        <div class="Wrapper">
+            <div class="loginLeft">
+                <br/>
+                <br/>
+                <br/>
+                JSON file
+                <input
+                style="display: none" class="loginInput"
+                type="file" (change)="onFileChanged($event)"
+                #fileInput>
+                <button (click)="fileInput.click()" class="loginInput">Select File</button>
+                <br>
+                Slike
+                <input type="file" class="loginInput" size="30" placeholder="Slika" (change)="onFileSelected($event)" multiple accept="image/png, image/jpeg" name='slike' #slikaInput>
+               
+                <br>
+                <button  (click)='addAgency()'class="loginButton" value="Dodaj agenciju"> Dodaj </button>
+               
+              
+                <button routerLink='/oglasavac' class="loginButton" style="background-color: lightgrey; border-color: lightgray;">Moj profil</button>
+
+            </div>
+            <div class="loginRight">
+            </div>
+   
+        </div>
+    </div>

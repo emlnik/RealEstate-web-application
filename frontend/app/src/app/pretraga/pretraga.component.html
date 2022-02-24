@@ -1,0 +1,44 @@
+<div onload="">
+		
+    <div class="main">
+        <div class="Wrapper" style="height: auto; min-height: 80vh;">
+            <div class="loginLeft">
+               
+     
+                <tr class="tabhead">
+                    <th width='100%'> Pretraga</th>
+                    
+                  </tr>
+  
+                <select class="loginInput1" size="30" [(ngModel)]='tip'>
+                    <option value="stan">stan</option>
+                    <option value="kuca">kuca</option>
+                    <option value="vikendica">vikendica</option>
+                    <option value="lokal">lokal</option>
+                    <option value="magacin">magacin</option>
+                </select>
+               
+                <input type='text' class="loginInput" size="30" placeholder="Grad" name='grad' [(ngModel)]='grad'>
+                <br>
+                <input type='text' class="loginInput" size="30" placeholder="Opstina" name='opstina' [(ngModel)]='opstina'>
+                <br>
+                <input type='text' class="loginInput" size="30" placeholder="Deo opstine" name='mikrolokacija' [(ngModel)]='mikrolokacija'>
+                <br>
+                <input type='number' class="loginInput" size="30" placeholder="Cena do eur" name='cenaDo' [(ngModel)]='cenaDo'>
+                <br>
+                <input type="number" class="loginInput" size="30" placeholder="Kvadratura od m2" name='kvadraturaOd' [(ngModel)]='kvadraturaOd'>
+                <br>
+                <input type="number" class="loginInput" size="30" placeholder="Minimalan broj soba" name='minbrsoba' [(ngModel)]='minBrSoba'>
+                <br>
+                <button (click)="pretraga()" class="loginButton" value="PRETRAGA"> Pretrazi </button>
+                
+                    {{message}}
+              
+                    <button routerLink='/kupac' class="loginButton" style="background-color: lightgrey; border-color: lightgray;">Moj profil</button>
+            </div>
+            <div class="loginRight">
+            </div>
+            
+        </div>
+    </div>
+  

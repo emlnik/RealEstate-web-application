@@ -1,0 +1,91 @@
+<div onload="">
+		
+    <div class="main">
+        <div class="loginWrapper">
+            <div class="loginLeft">
+                <table class="countriesTable">
+              
+                    <tr class="tabhead">
+                        
+                        <td>
+                            <input class="loginInput" type="text" placeholder='promenite broj telefona'value="{{telefon}}" [(ngModel)]="telefon">
+                        </td>
+                      
+                    </tr>
+                    <tr>
+                        <td>
+                            <button (click)="changeTelefon()">Azuriraj</button>
+                        </td>
+                    </tr>
+                    <tr class="tabhead">
+                        
+                        <td>
+                            <input class='loginInput1'type="text" placeholder='promenite email'value="{{email}}" [(ngModel)]="email">
+                        </td>
+                     
+                      
+                    </tr>
+                 
+                    <tr>
+                        <td>
+                            <button (click)="changeEmail()">Azuriraj</button>
+                        </td>
+                    </tr>
+                    <tr>
+                    <td class="tabhead">Trenutna agencija: {{kor.agency}}</td>
+                </tr>
+                    <tr class="tabheads">
+                    <td class="tabhead"> Promenite agenciju</td>
+                </tr>
+                    <tr class="tabhead" *ngIf="agencija!=null">
+                      
+                        <select [(ngModel)]="agencija" value="{{agencija}}">
+                            <option value=""></option>
+                            <option value="{{agencija}}"></option>
+                            <option *ngFor="let a of agencije">{{a.name}}</option>
+                        </select>
+                 
+                       </tr>
+                       <tr class="tabhead" *ngIf="agencija==null">
+                        <div>
+                            <td>
+                               Zaposlili ste se ?
+                            </td>
+                        </div>
+                        <div>
+                            agencija
+                        <select [(ngModel)]="agencija" value="{{kor.agency}}" class="organizerSelect loginInput" >
+                            
+                            <option value="{{agencija}}"></option>
+                            <option *ngFor="let a of agencije" [value]="a.name">{{a.name}}</option>
+                        </select>
+
+                    </div>
+                       </tr>
+                       <tr class="tabhead">
+                          
+                        
+                        <td> Broj licence
+                            <input class="loginInput" type="text" placeholder="Broj licence" value="{{licenca}}" [(ngModel)]="licenca">
+                                                    </td>
+                       </tr>
+                       <tr *ngIf="agencija!=null && dap==false">
+                        <td>
+                            <button (click)="updateAgencija1()">Azuriraj</button>
+                        </td>
+                    </tr>
+                   
+                  </table>
+                  <div>
+                  <span class="errorMessage">
+                    {{messagetel}}
+                </span>
+            </div>
+            <button routerLink='/oglasavac' class="loginButton" style="background-color: lightgrey; border-color: lightgray;">Moj profil</button>
+   <br/>
+            </div>
+          
+            <br/>
+        
+        </div>
+    </div>

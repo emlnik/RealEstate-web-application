@@ -1,0 +1,64 @@
+<div onload="">
+		
+    <div class="main">
+        <div class="Wrapper">
+            <div class="loginLeft">
+                <br/>
+                <br/>
+                
+                {{ime}}
+                <br>
+              
+                <br>
+                Kvadratura<input type='text' class="loginInput" size="30" value="{{kvadratura}}" name='oldPassword' [(ngModel)]='kvadratura'>
+                <br>
+               Soba <input type='number' class="loginInput" size="30" value="{{soba}}" name='oldPassword' [(ngModel)]='soba'>
+                <br>
+               Godina  <input type='number' class="loginInput" size="30" value="{{godina}}" name='oldPassword' [(ngModel)]='godina'>
+                <br>
+               Stanje <input type='text' class="loginInput" size="30" value="{{stanje}}" name='oldPassword' [(ngModel)]='stanje'>
+                <br>
+                Grejanje<input type='text' class="loginInput" size="30" value="{{grejanje}}" name='oldPassword' [(ngModel)]='grejanje'>
+                <br>
+                <div *ngIf="sprat!=null">
+               Sprat <input type='text' class="loginInput" size="30" value="{{sprat}}" name='oldPassword' [(ngModel)]='sprat'>
+                <br>
+                </div>
+               Spratnost <input type='number' class="loginInput" size="30" value="{{spratnost}}" name='oldPassword' [(ngModel)]='spratnost'>
+                <br>
+                Parking<input type='text' class="loginInput" size="30" value="{{parking}}" name='oldPassword' [(ngModel)]='parking'>
+                <br>
+               
+                Troskovi<input type='number' class="loginInput" size="30" value="{{troskovi}}"  name='oldPassword' [(ngModel)]='troskovi'>
+                <br>
+               Opis <textarea class="loginInput" size="30" value="{{opis}}"  name='oldPassword' [(ngModel)]='opis'></textarea>
+                <br>
+              Cena  <input type='text' class="loginInput" size="30" value="{{cena}}"  name='oldPassword' [(ngModel)]='cena'>
+               
+                <br>
+              Karakteristike  <div >
+                    <td>
+                        <input type="checkbox"  #selected (change)="change(selected.value)" name="Characteristics" [checked]="characteristic.includes(selected.value)" value="Terasa">Terasa <input type="checkbox" #selected2 (change)="change(selected2.value)" [checked]="characteristic.includes(selected2.value)" name="Characteristics" value="Internet">Internet <input type="checkbox" #selected10 (change)="change(selected10.value)" [checked]="characteristic.includes(selected10.value)" name="Characteristics" value="Podrum">Podrum <br>
+                        <input type="checkbox" name="Characteristics" #selected3 (change)="change(selected3.value)" [checked]="characteristic.includes(selected3.value)" value="Lift">Lift <input type="checkbox" #selected4 (change)="change(selected4.value)" [checked]="characteristic.includes(selected4.value)" name="Characteristics" value="Garaza">Garaza <input type="checkbox" name="Characteristics" #sel56 [checked]="characteristic.includes(sel56.value)" (change)="change(sel56.value)" value="Telefon">Telefon <br>
+                        <input type="checkbox" name="Characteristics" #selected6 (change)="change(selected6.value)" [checked]="characteristic.includes(selected6.value)" value="Balkon">Balkon <input type="checkbox" #selected7 (change)="change(selected7.value)" name="Characteristics"  value="Basta">Basta <input type="checkbox" #selected8 (change)="change(selected8.value)" [checked]="characteristic.includes(selected8.value)" name="Characteristics" value="Lodja">Lodja
+                    </td>
+                </div>
+                <br>
+                <input type="file" class="loginInput" size="30" placeholder="Slika" (change)="onFileSelected($event)" multiple accept="image/png, image/jpeg" name='slike'>
+               
+             
+              
+              
+              
+              
+               
+                <button (click)='update()' class="loginButton" value="Azuriraj"> Azuriraj </button>
+                <div class="errorMessage">
+                    {{message}}
+                </div>
+
+            </div>
+            <div class="loginRight">
+            </div>
+        </div>
+    </div>

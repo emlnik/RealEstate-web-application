@@ -1,0 +1,57 @@
+
+
+
+<div onload="">
+
+    <div class="main">
+        <table class="countriesTable">
+            <tr class="tabhead">
+          <th width='100%'> Moj profil</th>
+        </tr>
+            <tr class="tabhead">
+                <th width="10%">Ime i prezime</th>
+                <th width="60%">Profilna slika</th>
+               
+            </tr>
+            <tbody>
+                <tr>
+                    <th>{{userIme}} {{userPrezime}}</th>
+                   
+                    <th>
+                        <div>
+                            <img class='avatar' src="{{'../../assets/'+ulogovan.picture}}" alt="">
+                        </div>
+                    </th>
+                 
+                </tr>
+<tr>
+    <td>
+    
+  
+  
+   <button routerLink='/mojenekretnine' class="loginButton" style="background-color: lightgrey; border-color: lightgray;"> Vasi oglasi</button>
+   <br/>
+   <button routerLink='/novanekretnina' class="loginButton" style="background-color: lightgrey; border-color: lightgray;"> Dodajte novu nekretninu</button>
+   <br/>
+   <button routerLink='/novajson' class="loginButton" style="background-color: lightgrey; border-color: lightgray;"> Dodajte novu nekretninu preko fajla</button>
+   <br/>
+   <button routerLink='/oglasavacpodaci' class="loginButton" style="background-color: lightgrey; border-color: lightgray;">Izmenite vase podatke</button>
+   <br/>
+   <button routerLink='/changepass' class="loginButton" style="background-color: lightgrey; border-color: lightgray;"> Promenite lozinku</button>
+<br/>
+<button  class="loginButton" (click)="logout()" value="logout"> LOG OUT</button>
+<br/>
+</td>  
+</tr>        
+            </tbody>
+        </table>
+    </div>
+    
+<div class="fullWidth">
+    <hr /><button (click)='logout()' class="loginButton" value="LOGOUT"> LOG OUT </button>
+  </div>
+
+</div>
+
+
+

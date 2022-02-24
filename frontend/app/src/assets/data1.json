@@ -1,0 +1,22 @@
+
+{
+"Characteristics":["Terasa","Internet","Podrum","Lift","Telefon","Garaza"],
+"Type":"stan",
+"Name":"Djokovic restoran-duplex stan",
+"City":"Beograd",
+"Municipality":"Novi Beograd",
+"Street":"Bulevar Zorana Djindjica ",
+"Microlocation":"Arena",
+"Area":136,
+"Rooms":4,
+"ConstructionYear":2000,
+"State":"lux",
+"Heating":"centralno",
+"Floor":6,
+"TotalFloors":7,
+"Parking":"Ne",
+"MonthlyUtilities":180,
+"Price":360000,
+"About":"Atraktivan i luksuzni duplex površine 136 m2 sa velikom terasom. Stan se nalazi na najatraktivnijoj lokaciji, u istoj zgradi gde je i popularnoi restoran Novak Đoković i u neposrednoj blizini Beogradske Arene, nalazi se ovaj petosoban DUPLEX stan.",
+
+"Sold":false}

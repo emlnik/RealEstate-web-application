@@ -1,0 +1,213 @@
+<section class="py-13">
+    <div class="container">
+        <div class="row login-register">
+            <div class="col-lg-5">
+                <div class="card border-0 shadow-xxs-2 mb-6">
+                    <div class="card-body px-8 py-6">
+                        <h2 class="card-title fs-30 font-weight-600 text-dark lh-16 mb-2" class="estate">Regitracija</h2>
+                  
+                     
+                            <div class="form-group mb-4" class="estate">
+                                <br/>
+                                <br/>
+                                <label for="username-1">Ime</label>
+                                <br/>
+                                <input type="text" class="form-control form-control-lg border-0"
+                                       id="username-1" name="ime"
+                                       placeholder="Vase ime" [(ngModel)]="ime">
+
+                            </div>
+                            <br/>
+                            <div class="form-group mb-4" class="estate">
+                                <label for="password-2">Prezime</label>
+                                <div class="input-group input-group-lg">
+                                    <input type="text" class="form-control border-0 shadow-none fs-13"
+                                           id="password-2" name="password"
+                                           placeholder="Vase prezime" [(ngModel)]="prezime">
+                                    <div class="input-group-append">
+                                                <span class="input-group-text bg-gray-01 border-0 text-body fs-18">
+                                                    <i class="far fa-eye-slash"></i>
+                                                </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br/>
+                            <div class="form-group mb-4"class="estate">
+                                <label for="password-2">Korisnicko ime</label>
+                                <div class="input-group input-group-lg">
+                                    <input type="text" class="form-control border-0 shadow-none fs-13"
+                                           id="password-2" name="password"
+                                           placeholder="Korisnicko ime" [(ngModel)]="username">
+                                    <div class="input-group-append">
+                                                <span class="input-group-text bg-gray-01 border-0 text-body fs-18">
+                                                    <i class="far fa-eye-slash"></i>
+                                                </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br/>
+                            <div class="form-group mb-4"class="estate">
+                                <label for="password-2">Lozinka</label>
+                                <div class="input-group input-group-lg">
+                                    <input type="password" class="form-control border-0 shadow-none fs-13"
+                                           id="password-2" name="password"
+                                           placeholder="Lozinka" [(ngModel)]="password">
+                                    <div class="input-group-append">
+                                                <span class="input-group-text bg-gray-01 border-0 text-body fs-18">
+                                                    <i class="far fa-eye-slash"></i>
+                                                </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br/>
+                            <div class="form-group mb-4"class="estate">
+                                <label for="password-2">Potvrda lozinke</label>
+                                <div class="input-group input-group-lg">
+                                    <input type="password" class="form-control border-0 shadow-none fs-13"
+                                           id="password-2" name="password"
+                                           placeholder="Potvrdite lozinku" [(ngModel)]="lozinka1">
+                                           <br/>
+                                          <span class="error">{{messageLoz}}</span> 
+                                    <div class="input-group-append">
+                                                <span class="input-group-text bg-gray-01 border-0 text-body fs-18">
+                                                    <i class="far fa-eye-slash"></i>
+                                                </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br/>
+                            <div class="form-group mb-4"class="estate">
+                                <label for="password-2">Grad</label>
+                                <div class="input-group input-group-lg">
+                                    <input type="text" class="form-control border-0 shadow-none fs-13"
+                                           id="password-2" name="password"
+                                           placeholder="Grad" [(ngModel)]="grad">
+                                    <div class="input-group-append">
+                                                <span class="input-group-text bg-gray-01 border-0 text-body fs-18">
+                                                    <i class="far fa-eye-slash"></i>
+                                                </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                       <br/>
+                            <div class="form-group mb-4"class="estate">
+                                <label for="password-2">Datum rodjenja</label>
+                                <div class="input-group input-group-lg">
+                                    <input type="text" class="form-control border-0 shadow-none fs-13"
+                                           id="password-2" name="password"
+                                           placeholder="gggg-mm-dd" [(ngModel)]="datumRodjenja">
+                                    <div class="input-group-append">
+                                                <span class="input-group-text bg-gray-01 border-0 text-body fs-18">
+                                                    <i class="far fa-eye-slash"></i>
+                                                </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br/>
+                            <div class="form-group mb-4"class="estate">
+                                <label for="password-2">Email</label>
+                                <div class="input-group input-group-lg">
+                                    <input type="text" class="form-control border-0 shadow-none fs-13"
+                                           id="password-2" name="password"
+                                           placeholder="Email" [(ngModel)]="email">
+                                    <div class="input-group-append">
+                                                <span class="input-group-text bg-gray-01 border-0 text-body fs-18">
+                                                    <i class="far fa-eye-slash"></i>
+                                                </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br/>
+                            <div class="form-group mb-4"class="estate">
+                                <label for="password-2">Broj telefona</label>
+                                <div class="input-group input-group-lg">
+                                    <input type="text" class="form-control border-0 shadow-none fs-13"
+                                           id="password-2" name="password"
+                                           placeholder="Telefon" [(ngModel)]="telefon">
+                                    <div class="input-group-append">
+                                                <span class="input-group-text bg-gray-01 border-0 text-body fs-18">
+                                                    <i class="far fa-eye-slash"></i>
+                                                </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br/>
+                            <div class="form-group mb-4"class="estate">
+                                <label for="password-2">Profilna slika</label>
+                                <div class="input-group input-group-lg">
+                                    <input type="file" name="avatar" id="field" accept="image/jpeg, image/png" (change)="onFileSelected($event)">
+                                    <div class="input-group-append">
+                                                <span class="input-group-text bg-gray-01 border-0 text-body fs-18">
+                                                    <i class="far fa-eye-slash"></i>
+                                                </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br/>
+                            <div class="form-group mb-4"class="estate">
+                                <label for="password-2">Tip</label>
+                                <div class="input-group input-group-lg">
+                                   <select [(ngModel)]="tip">
+                                       <option *ngFor="let t of tipovi" value="{{t}}">{{t}}</option>
+                                   </select>
+                                    <div class="input-group-append">
+                                                <span class="input-group-text bg-gray-01 border-0 text-body fs-18">
+                                                    <i class="far fa-eye-slash"></i>
+                                                </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br/>
+                            <div class="form-group mb-4"class="estate">
+                                <label for="password-2">Agencija</label>
+                                <br/>
+                                <select #selectelem name="agencija" (change)="promeni(selectelem.value)">
+                                    <option value=""></option>
+                                    <option *ngFor="let a of agencije" [value]="a.name">{{a.name}}</option>
+                                </select>
+                                </div>
+
+                           <br/>
+                            <div class="form-group mb-4"class="estate">
+                                <label for="password-2">Broj licence</label>
+                                <div class="input-group input-group-lg">
+                                    <input type="text" class="form-control border-0 shadow-none fs-13"
+                                           id="password-2" name="password"
+                                           placeholder="Broj licence" [(ngModel)]="licenca">
+                                    <div class="input-group-append">
+                                                <span class="input-group-text bg-gray-01 border-0 text-body fs-18">
+                                                    <i class="far fa-eye-slash"></i>
+                                                </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br/>
+                            <ng-hcaptcha class="estate" (verify)="onVerify($event)"
+                            (expired)="onExpired($event)"
+                            (error)="onError($event)">
+
+                            </ng-hcaptcha>
+                    
+                            
+                            <br/>
+                            <div  class='estate'>
+                            <button type="submit" class="loginButton" (click)="register()">Dodajte korisnika</button>
+                           
+                            <br/>
+                            <span class="error">{{message}}</span>
+                            <br/>
+                            <span class="error">{{messageEmail}}</span>
+                        
+                        </div>
+                   

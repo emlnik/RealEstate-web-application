@@ -1,0 +1,41 @@
+<div onload="">
+
+    <div class="main">
+        <table class="countriesTable" *ngIf="favUser.length>0;else nema">
+            <tr class="tabhead">
+          <th width='50%'> Vase omiljene nekretnine</th>
+    
+        </tr>
+            <tr class="tabhead">
+                <th width="10%">Naziv nekretnine</th>
+              
+              
+                
+            </tr>
+            <tbody>
+                <tr *ngFor='let c of favUser'>
+                    <th>{{c.id}}</th>
+                   <!--<th>{{c.Name}}</th>
+                    <th>{{c.City}}/{{c.Municipality}}/{{c.Microlocation}}</th>
+                    <th>{{c.Type}}</th>
+                    <th>{{c.Price}}€</th>
+                    <th>{{c.Area}}m<sup>2</sup></th>
+                    <th>{{avgPrice(c).toFixed(2)}}€/m<sup>2</sup></th>
+                    <th>{{c.About}}</th> -->
+                
+                    <th>
+                        <button class="loginButton" width="10%" (click)="ukloni(c.id)">Uklonite</button>
+                    </th>
+                    
+                </tr>
+                <tr>
+                  
+                
+            </tbody>
+            <button routerLink='/kupac' class="loginButton" style="background-color: lightgrey; border-color: lightgray;">Moj profil</button>
+        </table>
+       
+        <ng-template class='errorMessage'#nema>Nemate omiljene nekretnine</ng-template>
+    </div>
+</div>
+

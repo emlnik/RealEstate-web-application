@@ -1,0 +1,64 @@
+<div onload="">
+		
+    <div class="main">
+        <div class="Wrapper">
+            <div class="loginLeft">
+                <br/>
+                <br/>
+                <br/>
+              
+                <input type='text' class="loginInput" size="30" placeholder="Naziv nekretnine" name='naziv' [(ngModel)]='naziv'>
+                <br>
+                <input type="text" class="loginInput" size="30" placeholder="stan/kuca/magacin/lokal/vikendica" name='grad' [(ngModel)]='tip'>
+                <br>
+                <input type="text" class="loginInput" size="30" placeholder="Grad" name='adresa' [(ngModel)]='grad'>
+                <br>
+                <input type="text" class="loginInput" size="30" placeholder="Opstina" name='Telefon' [(ngModel)]='opstina'>
+                <br>
+                <input type="text" class="loginInput" size="30" placeholder="Deo opstine" name='PIB' [(ngModel)]='mikrolokacija'>
+                <br>
+                <input type='text' class="loginInput" size="30" placeholder="Ulica" name='naziv' [(ngModel)]='ulica'>
+                <br>
+                <input type='number' class="loginInput" size="30" placeholder="Kvadratura" name='naziv' [(ngModel)]='kvadratura'>
+                <br>
+                <input type="number" class="loginInput" size="30" placeholder="Sobe" name='grad' [(ngModel)]='soba'>
+                <br>
+                <input type="number" class="loginInput" size="30" placeholder="Godina izgradnje" name='adresa' [(ngModel)]='godina'>
+                <br>
+                <input type="text" class="loginInput" size="30" placeholder="Stanje" name='Telefon' [(ngModel)]='stanje'>
+                <br>
+                <input type="number" class="loginInput" size="30" placeholder="Sprat" name='PIB' [(ngModel)]='sprat'>
+                <br>
+                <input type='number' class="loginInput" size="30" placeholder="Spratnost" name='naziv' [(ngModel)]='spratnost'>
+                <br>
+                <input type="text" class="loginInput" size="30" placeholder="Parking" name='grad' [(ngModel)]='parking'>
+                <br>
+               
+                <input type="text" class="loginInput" size="30" placeholder="Grejanje" name='grad' [(ngModel)]='grejanje'>
+                <br>
+                <input type="text" class="loginInput" size="30" placeholder="Troskovi" name='grad' [(ngModel)]='troskovi'>
+                <br>
+                <input type='number' class="loginInput" size="30" placeholder="Cena" name='naziv' [(ngModel)]='cena'>
+                <br>
+                <textarea name="Opis" [(ngModel)]="opis">Opis</textarea>
+                <div>
+                    Karakteristike
+                    
+                        <input type="checkbox"  #selected (change)="change(selected.value)" name="Characteristics"  value="Terasa">Terasa <input type="checkbox" #selected2 (change)="change(selected2.value)"  name="Characteristics" value="Internet">Internet <input type="checkbox" #selected10 (change)="change(selected10.value)" name="Characteristics" value="Podrum">Podrum <br>
+                        <input type="checkbox" name="Characteristics" #selected3 (change)="change(selected3.value)"  value="Lift">Lift <input type="checkbox" #selected4 (change)="change(selected4.value)"  name="Characteristics" value="Garaza">Garaza <input type="checkbox" name="Characteristics" #sel56  (change)="change(sel56.value)" value="Telefon">Telefon <br>
+                        <input type="checkbox" name="Characteristics" #selected6 (change)="change(selected6.value)"  value="Balkon">Balkon <input type="checkbox" #selected7 (change)="change(selected7.value)" name="Characteristics" value="Basta">Basta <input type="checkbox" #selected8 (change)="change(selected8.value)"  name="Characteristics" value="Lodja">Lodja
+                   
+                </div>
+                <br>
+                <input type="file" class="loginInput" size="30" placeholder="Slika" (change)="onFileSelected($event)" multiple accept="image/png, image/jpeg" name='slike'>
+                <br>
+               
+                <button  (click)='addAgency()'class="loginButton" value="Dodaj"> Dodaj </button>
+                <button routerLink='/oglasavac' class="loginButton" style="background-color: lightgrey; border-color: lightgray;">Moj profil</button>
+
+            </div>
+            <div class="loginRight">
+            </div>
+       
+        </div>
+    </div>

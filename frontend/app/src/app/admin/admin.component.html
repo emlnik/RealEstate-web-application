@@ -1,0 +1,93 @@
+<div class="main">
+    <div class="loginWrapper" style="height: auto; min-height: 70vh;">
+        <img class='avatar 'src="{{'../../assets/'+ulogovan.picture}}" alt="">
+      <select name="organizerOptions" id="organizerOptions" class="organizerSelect loginInput"
+        [(ngModel)]="choosenOption" value="Meni" placeholder="Izaberite opciju">
+        
+        <option value="1">Prihvatanje/odbijanje korisnika </option>
+        <option value="2"> Dodavanje novih korisnika</option>
+       
+        <option value="4">Brisanje ili azuriranje validnih korisnika</option>
+        <option value="5">Dodavanje nove agencije</option>
+       
+      </select>
+      <br />
+      <span *ngIf="choosenOption ==1">
+  <div *ngIf="zahtevi.length>0; else nemazahteva">
+  <table>
+      <tr>
+         <th>Ime korisnika</th>
+         <th>Prezime korisnika</th>
+        
+      </tr>
+      <tr *ngFor="let z of zahtevi">
+<td>{{z.firstname}}</td>
+<td>{{z.lastname}}</td>
+<td>
+    <button (click)="prihvati(z.username)"class="loginButton">Prihvati</button>
+    <button (click) ="odbij(z.username)"class="loginButton">Odbij</button>
+</td>
+      </tr>
+  </table>
+</div>
+<ng-template #nemazahteva class="errorMessage">Nema zahteva</ng-template>
+      </span>
+      <span *ngIf="choosenOption ==2">
+          <div class="option3Left">
+            <button routerLink='/dodaj' class="loginButton" style="background-color: lightgrey; border-color: lightgray;"> Dodajte korisnika</button>
+            
+      </div>
+
+      </span>
+      <br/>
+      <span *ngIf="choosenOption ==4">
+        <div class="option3Left">
+            <div *ngIf="sviKorisnici.length>0; else nemaKor">
+                <table>
+                    <tr>
+                       <th>Ime korisnika</th>
+                       <th>Prezime korisnika</th>
+                      
+                    </tr>
+                    <tr *ngFor="let z of sviKorisnici">
+              <td>{{z.firstname}}</td>
+              <td>{{z.lastname}}</td>
+              <td>
+                  <button (click)="obrisi(z.username)"class="loginButton">Obrisi</button>
+                  <button (click)="azuriraj(z.username)"class="loginButton">Azuriraj korisnika</button>
+              </td>
+                    </tr>
+                </table>
+              </div>
+              <ng-template #nemaKor class="errorMessage">Nema korisnika</ng-template>
+    
+    </div>
+
+    </span>
+    <br/>
+    <span *ngIf="choosenOption ==5">
+        <div class="option3Left">
+            <button routerLink='/dodajAgenciju' class="loginButton" style="background-color: lightgrey; border-color: lightgray;"> Dodajte agenciju</button>
+
+
+            </div>
+            </span>
+            <br/>
+            <span *ngIf="choosenOption ==3">
+                <div class="option3Left">
+                    <button routerLink='/dodajAgenciju' class="loginButton" style="background-color: lightgrey; border-color: lightgray;"> </button>
+        
+        
+                    </div>
+                    </span>
+  
+      <div class="fullWidth">
+        <hr /><button (click)='logout()' class="loginButton" value="LOGOUT"> LOG OUT </button>
+        <br/>
+        <button routerLink='/changepass' class="loginButton" style="background-color: lightgrey; border-color: lightgray;"> Promenite lozinku</button>
+      </div>
+    </div>
+  
+  
+      
+  </div>

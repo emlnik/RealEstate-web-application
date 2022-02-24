@@ -1,0 +1,20 @@
+
+{
+"Characteristics":["Terasa","Internet","Podrum","Lift","Telefon"],
+"Type":"stan",
+"Name":"Stan Savski venac",
+"City":"Beograd",
+"Municipality":"Savski venac",
+"Street":"Pop Lukina 20",
+"Microlocation":"Zeleni venac",
+"Area":45,
+"Rooms":2,
+"ConstructionYear":2000,
+"State":"renovirano",
+"Heating":"centralno",
+"Floor":6,
+"TotalFloors":6,
+"Parking":"Ne",
+"MonthlyUtilities":115,
+"Price":115000,
+"About":"U zgradi sa liftom, na prestižnoj lokaciji u centru grada, nalazi se na II spratu, dvostrano orijentisan, veoma svetao stan od 78m2 + 5 m2 terasa. Sastoji se od: hodnika, dnevnog boravka okrenutom ka mirnoj stani ka dvorištu i koji ima izlaz na terasu koja se proteže celom dužinom, potpuno opremljene kuhinje sa trpezarijom koja ima prirodnu ventilaciju.","Sold":false}

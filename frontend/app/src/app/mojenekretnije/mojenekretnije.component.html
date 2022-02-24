@@ -1,0 +1,49 @@
+<div onload="">
+
+    <div class="main">
+        <table class="countriesTable" *ngIf="rezultati.length>0 else nema">
+            <tr class="tabhead">
+          <th width='100%'> Vasi oglasi</th>
+        </tr>
+            <tr class="tabhead">
+                <th width="10%">Naziv nekretnine</th>
+             
+                <th width="5%">Cena</th>
+          
+                
+            </tr>
+            <tbody>
+                <tr *ngFor='let c of rezultati'>
+                    <th>{{c.Name}}</th>
+                
+                    <th>{{c.Price}}€</th>
+                
+                    <th *ngIf="c.Sold==false">
+                        <button class="loginButton" width="10%" (click)="prodato(c.Name)">Prodaj</button>
+                    </th>
+                    <th *ngIf="c.Sold==true">
+PRODATO
+                    </th>
+                    <th *ngIf="c.Sold==false">
+                        <button  class="loginButton" (click)="azuriraj(c.Name)"> Azurirajte nekretninu</button>
+                                            </th>
+                
+                    
+                </tr>
+                <tr>
+                  
+                
+            </tbody>
+        </table>
+        <ng-template #nema>Nemate oglase</ng-template>
+        <div class="fullWidth">
+ 
+            <br/>
+            <button routerLink='/oglasavac' class="loginButton" style="background-color: lightgrey; border-color: lightgray;"> Moj profil</button>
+       
+          
+        </div>
+          
+       
+    </div>
+</div>

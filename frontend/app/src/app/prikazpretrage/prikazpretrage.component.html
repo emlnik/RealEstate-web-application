@@ -1,0 +1,46 @@
+<div onload="">
+
+    <div class="main">
+        <table class="countriesTable" *ngIf="rezultati.length>0;else nema">
+            <tr class="tabhead">
+          <th width='100%'> Rezultati pretrage</th>
+  
+        </tr>
+            <tr class="tabhead">
+                <th width="10%">Naziv nekretnine</th>
+                <th width="10%">Lokacija</th>
+                <th width="10%">Tip</th>
+                <th width="5%">Cena</th>
+                <th width="10%">Kvadratura</th>
+                <th width="10%">Prosecna cena po kvadratu</th>
+                <th width="50%">Kratak opis</th>
+              
+                
+            </tr>
+            <tbody>
+                <tr *ngFor='let c of rezultati'>
+                    <th>{{c.Name}}</th>
+                    <th>{{c.City}}/{{c.Municipality}}/{{c.Microlocation}}</th>
+                    <th>{{c.Type}}</th>
+                    <th>{{c.Price}}€</th>
+                    <th>{{c.Area}}m<sup>2</sup></th>
+                    <th>{{avgPrice(c).toFixed(2)}}€/m<sup>2</sup></th>
+                    <th>{{c.About}}</th>
+                    <th>
+                        <button  width="10%" (click)="detalji(c.Name,c.Microlocation)">Detaljnije</button>
+                    </th>
+                    <th>
+                        <button  width="10%" (click)="addFav(c.Name)">Dodaj u omiljene</button>
+                    </th>
+                
+                    
+                </tr>
+                <tr>
+                  
+                
+            </tbody>
+            <button routerLink='/kupac' class="loginButton" style="background-color: lightgrey; border-color: lightgray;">Moj profil</button>
+        </table>
+        <ng-template class='errorMessage'#nema>Nije pronadjena nijedna nekretnina sa ovim karakteristikama</ng-template>
+    </div>
+</div>

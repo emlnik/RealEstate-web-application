@@ -1,0 +1,30 @@
+<div onload="">
+		
+    <div class="main">
+        <div class="loginWrapper">
+            <div class="loginLeft">
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <input type='text' class="loginInput" size="30" placeholder="Ime" name='username' [(ngModel)]='ime'>
+                <br>
+                <input type='text' class="loginInput" size="30" placeholder="Prezime" name='oldPassword' [(ngModel)]='prezime'>
+                <br>
+                <input type='text' class="loginInput" size="30" placeholder="gggg-mm-dd" name='oldPassword' [(ngModel)]='bday'>
+                <br>
+                <input type='text' class="loginInput" size="30" placeholder="Telefon" name='oldPassword' [(ngModel)]='phone'>
+                <br>
+               
+                <button (click)='update()' class="loginButton" value="Azuriraj"> Azuriraj </button>
+                <div class="errorMessage">
+                    {{message}}
+                </div>
+
+            </div>
+            <div class="loginRight">
+            </div>
+        </div>
+    </div>

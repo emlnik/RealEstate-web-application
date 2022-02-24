@@ -1,0 +1,31 @@
+<div onload="">
+		
+    <div class="main">
+        <div class="loginWrapper">
+            <div class="loginLeft">
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <input type='text' class="loginInput" size="30" placeholder="Naziv agencije" name='naziv' [(ngModel)]='naziv'>
+                <br>
+                <input type="text" class="loginInput" size="30" placeholder="Grad" name='grad' [(ngModel)]='grad'>
+                <br>
+                <input type="text" class="loginInput" size="30" placeholder="Adresa" name='adresa' [(ngModel)]='adresa'>
+                <br>
+                <input type="text" class="loginInput" size="30" placeholder="Telefon" name='Telefon' [(ngModel)]='telefon'>
+                <br>
+                <input type="text" class="loginInput" size="30" placeholder="PIB" name='PIB' [(ngModel)]='pib'>
+                <br>
+                <button (click)='ubaci()' class="loginButton" value="Dodaj agenciju"> Dodaj agenciju </button>
+                <div class="errorMessage">
+                    {{message}}
+                </div>
+
+            </div>
+            <div class="loginRight">
+            </div>
+        </div>
+    </div>
